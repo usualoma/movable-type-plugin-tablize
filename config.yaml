@@ -1,0 +1,24 @@
+#plugin information
+id: Tablize
+name: Tablize
+version: 0.0.1
+
+#about this plugin
+description: <__trans phrase="Tablizing any tag">
+author_name: <__trans phrase="toi-planning">
+author_link: http://tec.toi-planning.net/
+plugin_link: http://tec.toi-planning.net/mt/tablize/
+doc_link: http://tec.toi-planning.net/mt/tablize/manual
+
+#Localization
+l10n_class: Tablize::L10N
+
+tags:
+    block:
+        Tablize: $Tablize::Tablize::_hdlr_tablize
+        TablizeContainer: $Tablize::Tablize::_hdlr_tablize_container
+
+        TablizeIsFirstInRow: MT::Template::Context::slurp
+        TablizeIsLastInRow:  MT::Template::Context::slurp
+
+        TablizeSentinel:     MT::Template::Context::slurp
