@@ -1,7 +1,7 @@
 #plugin information
 id: Tablize
 name: Tablize
-version: 0.0.1
+version: 0.0.2
 
 #about this plugin
 description: <__trans phrase="Tablizing any tag">

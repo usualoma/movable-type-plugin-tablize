@@ -27,16 +27,14 @@ use strict;
 
 sub _hdlr_tablize {
 	my ($ctx, $args, $cond) = @_;
+
 	my $per_row = $args->{'tablize_per_row'}
-		or die 'per_row is required';
+		or return $ctx->error(MT->translate('tablize_per_row is required'));
 	my $tag = $args->{'tablize_tag'}
-		or die 'tag is required';
+		or return $ctx->error(MT->translate('tablize_tag is required'));
 
 	local $ctx->{__stash}{'tablize_per_row'} = $per_row;
 	local $ctx->{__stash}{'tablize_index'}   = -1;
-
-	#my $vars = $ctx->{__stash}{vars} ||= {};
-	#local $vars->{__first__} = !$i;
 
 	my $tokens  = $ctx->stash('tokens');
 
